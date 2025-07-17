@@ -121,11 +121,6 @@ urlpatterns = [
     path('api/notifications/<int:notification_id>/read/', mark_notification_as_read, name='mark-notification-read'),
 ]
 
-# SPA: всі не-API і не-admin шляхи віддають index.html
-urlpatterns += [
-    re_path(r'^(?!api/|admin/|static/).*$', TemplateView.as_view(template_name="index.html")),
-]
-
 # ⚙️ Для отдачи медиафайлов в режиме разработки
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
