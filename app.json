@@ -1,0 +1,51 @@
+{
+  "name": "Platforma",
+  "description": "A full-stack web application with Django backend and React frontend",
+  "repository": "https://github.com/yourusername/Platforma-master",
+  "logo": "",
+  "keywords": ["django", "react", "python", "javascript"],
+  "env": {
+    "SECRET_KEY": {
+      "description": "A secret key for Django",
+      "generator": "secret"
+    },
+    "DEBUG": {
+      "description": "Debug mode",
+      "value": "False"
+    },
+    "ALLOWED_HOSTS": {
+      "description": "Comma-separated list of allowed hosts",
+      "value": "your-app-name.herokuapp.com"
+    },
+    "EMAIL_HOST_USER": {
+      "description": "Email host user",
+      "value": "mishafeshannnn@gmail.com"
+    },
+    "EMAIL_HOST_PASSWORD": {
+      "description": "Email host password",
+      "value": "mqifddrlbbxmvyot"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:mini"
+    },
+    {
+      "plan": "heroku-redis:mini"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+} 
