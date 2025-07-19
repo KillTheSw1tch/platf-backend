@@ -194,11 +194,10 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:5174',
     'http://localhost:5174',
-    'https://your-app-name.herokuapp.com',  # Замініть на вашу назву додатку
+    'https://platf-backend-891db5e885ef.herokuapp.com/',
+    'https://platf-test.netlify.app/',
 ]
 CORS_ALLOWS_CREDENTIALS = True
-
-import os
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
